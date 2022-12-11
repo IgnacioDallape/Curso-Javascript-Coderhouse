@@ -6,13 +6,18 @@ devuelva el vuelto
 pregunte si quiere seguir operando */
 
 let pregunta;
+let resultado;
+function calcularResultado(){
+    let cobro = parseInt(prompt("Ingrese el total a pagar"));
+    let pago = parseInt(prompt("Ingrese el total abonado"));
+    resultado = pago - cobro;
+}
+
 let consola = parseInt(prompt("ingrese 1 para cobrar, ingrese otro numero para salir"));
 while(consola == 1){
 
         if(consola == 1){
-            let cobro = parseInt(prompt("Ingrese el total a pagar"));
-            let pago = parseInt(prompt("Ingrese el total abonado"));
-            let resultado = pago - cobro;
+            calcularResultado()
                 if(resultado > 0){
                     console.log("El vuelto es de: " + resultado + " pesos");
                 } else {
